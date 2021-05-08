@@ -1,0 +1,36 @@
+{
+    "name": "Google Ads Hider",
+    "description": "This extension hides ads when searching at Google",
+    "version": "0.1.1",
+    "manifest_version": 2,
+    "icons": {
+        "128": "./ad_hider_128.png"
+    },
+    "options_page": "./options.html",
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "include_globs": [
+                "http://*.google.*/search*",
+                "https://*.google.*/search*"
+            ],
+            "js": [
+                "content_script.js"
+            ],
+            "css": [
+                "myStyle.css"
+            ]
+        }
+    ],
+    "permissions": [
+        "https://www.google.com/*",
+        "storage"
+    ]
+}

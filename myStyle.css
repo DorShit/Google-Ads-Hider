@@ -1,0 +1,21 @@
+.hider {
+    background-color: rgba(252, 157, 176, 0);
+    width: 0.1px;
+    height: 0.1px;
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.colorChanger {
+    background-color: rgb(255, 168, 168);
+    filter: blur(0px);
+}
+
+.blurer {
+    filter: blur(4px);
+    pointer-events: none
+}
+
+
